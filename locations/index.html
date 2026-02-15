@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose a location</title>
+    <link rel="stylesheet" href="/static/core/css/site.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/">Opticare Eyewear</a>
+        <nav class="nav">
+          <a href="/#eye-tests">Eye Tests</a>
+          <a href="/#brands">Brands</a>
+          <a href="/#locations">Locations</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+<main class="page">
+  <section class="section">
+    <div class="container">
+      <div class="section-kicker">Book now</div>
+      <h1 class="section-title">Choose your location</h1>
+      <p class="section-text">
+        Pick a location below, then we will show details instantly.
+      </p>
+
+      <div id="loc-chooser" class="grid loc-grid fade-panel is-visible">
+          <button class="card loc-card loc-button" onclick="showLocation('loc1')">
+            <div class="loc-title">Downtown Location</div>
+            <div class="loc-services">
+                <span class="chip small">Sight test</span>
+            </div>
+            <div class="loc-hours">
+              <div class="strong">
+                11:00 AM – 6:00 PM
+              </div>
+              <div class="muted">Sun: Closed</div>
+            </div>
+            <div class="btn primary full">Select</div>
+          </button>
+          <button class="card loc-card loc-button" onclick="showLocation('loc2')">
+            <div class="loc-title">Richmond (Queensborough)</div>
+            <div class="loc-services">
+                <span class="chip small">Sight test</span>
+                <span class="chip small">Comprehensive eye exam</span>
+            </div>
+            <div class="loc-hours">
+              <div class="strong">
+                10:00 AM – 5:30 PM
+              </div>
+              <div class="muted">Sun: Closed</div>
+            </div>
+            <div class="btn primary full">Select</div>
+          </button>
+      </div>
+
+      <div id="loc-details-wrap" class="fade-panel" style="display:none;">
+        <div class="details-top">
+          <a class="btn ghost" href="javascript:void(0)" onclick="resetChooser()">Change location</a>
+        </div>
+        <div class="card details-shell">
+          <div id="details-loc1" class="loc-details" style="display:none;">
+            <div class="details-title">Downtown Location (Sight Tests)</div>
+
+            <div class="details-block">
+              <div class="muted">Services</div>
+              <div class="details-chips">
+                  <span class="chip small">Sight test</span>
+              </div>
+            </div>
+
+            <div class="details-grid">
+              <div class="details-block">
+                <div class="muted">Address</div>
+                <div class="strong">Address: 523 Richards St, Vancouver, BC V6B 2Z5</div>
+                <div class="spacer-sm"></div>
+                <a class="link" href="https://maps.app.goo.gl/Api1i5KwzZ9D3ga48" target="_blank" rel="noopener">Open in Google Maps</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.708953643956!2d-123.1217076843692!3d49.28272997933171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867179cb6dfead%3A0x8e5e8f5f4e4c4b0!2s523%20Richards%20St%2C%20Vancouver%2C%20BC%20V6B%202Z5%2C%20Canada!5e0!3m2!1sen!2sus!4v1700781234567!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class="details-block">
+                <div class="muted">Hours</div>
+                <div class="hours">
+                    <div class="hours-row">
+                      <div class="hours-day">Mon</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Tue</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Wed</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Thu</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Fri</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Sat</div>
+                      <div class="hours-time">11:00 AM – 6:00 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Sun</div>
+                      <div class="hours-time">Closed</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-block">
+              <div class="muted">Phone</div>
+              <div class="strong">Phone: +1 (604) 336 0262</div>
+            </div>
+
+            <div class="details-block">
+              <div class="muted">Notes</div>
+              <ul class="bullets">
+                  <li>Offers sight tests.</li>
+                  <li>Walk-ins welcome.</li>
+              </ul>
+            </div>
+
+            <div class="details-actions">
+              <a class="btn primary" href="mailto:opticareeyewear@gmail.com?subject=Booking%20request%20for%20Location%201">
+                Email to book
+              </a>
+              <a class="btn ghost" href="/">Back to home</a>
+            </div>
+          </div>
+          <div id="details-loc2" class="loc-details" style="display:none;">
+            <div class="details-title">Richmond (Queensborough) (Eye Exams)</div>
+
+            <div class="details-block">
+              <div class="muted">Services</div>
+              <div class="details-chips">
+                  <span class="chip small">Sight test</span>
+                  <span class="chip small">Comprehensive eye exam</span>
+              </div>
+            </div>
+
+            <div class="details-grid">
+              <div class="details-block">
+                <div class="muted">Address</div>
+                <div class="strong">Address: 23233 Gilley Rd Unit 150, Richmond, BC V6V 1A6</div>
+                <div class="spacer-sm"></div>
+                <a class="link" href="https://maps.app.goo.gl/ASxwCZSfNdnYt9pU6" target="_blank" rel="noopener">Open in Google Maps</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2608.224254287187!2d-122.9674053!3d49.177331099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486783d47207fc5%3A0x87eb574076fae7b0!2sOpticare%20Eyewear!5e0!3m2!1sen!2sca!4v1769203353219!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <div class="details-block">
+                <div class="muted">Hours</div>
+                <div class="hours">
+                    <div class="hours-row">
+                      <div class="hours-day">Mon</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Tue</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Wed</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Thu</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Fri</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Sat</div>
+                      <div class="hours-time">10:00 AM – 5:30 PM</div>
+                    </div>
+                    <div class="hours-row">
+                      <div class="hours-day">Sun</div>
+                      <div class="hours-time">Closed</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="details-block">
+              <div class="muted">Phone</div>
+              <div class="strong">Phone: +1 (604) 421 4491</div>
+            </div>
+
+            <div class="details-block">
+              <div class="muted">Notes</div>
+              <ul class="bullets">
+                  <li>Offers sight tests and comprehensive eye exams.</li>
+                  <li>Appointments recommended for eye exams.</li>
+              </ul>
+            </div>
+
+            <div class="details-actions">
+              <a class="btn primary" href="mailto:opticareeyewear@gmail.com?subject=Booking%20request%20for%20Location%202">
+                Email to book
+              </a>
+              <a class="btn ghost" href="/">Back to home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script>
+  window.INIT_LOCATION_ID = "";
+  window.LOCATION_DETAIL_PREFIX = "/locations/";
+</script>
+
+
+    <footer class="footer" id="contact">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-title">Contact</div>
+          <div class="footer-text">
+            <p>Email: <a href="mailto:opticareeyewear@gmail.com">opticareeyewear@gmail.com</a></p>
+            <p>Downtown Vancouver: +1 (604) 336 0262</p>
+            <p>Richmond (Queensborough): +1 (604) 421 4491</p>
+          </div>
+        </div>
+        <div class="footer-text muted">
+          © <span id="year"></span> Opticare Eyewear
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        var el = document.getElementById("year");
+        if (el) el.textContent = String(new Date().getFullYear());
+      })();
+    </script>
+    <script src="/static/core/js/site.js"></script>
+  </body>
+</html>
